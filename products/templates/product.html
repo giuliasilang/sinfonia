@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ product.name }}</h1>
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ product.image_url }}" alt="Product image">
+
+    <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+
+        <p class="card-text">
+            <strong>Prezzo:</strong> €{{ product.price }}
+        </p>
+
+        <p class="card-text">
+            <strong>Disponibili:</strong> {{ product.stock }}
+        </p>
+
+        <a href="/products/" class="btn btn-secondary">Torna ai prodotti</a>
+    </div>
+</div>
+
+{% endblock %}
