@@ -1,9 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Product
+import socket
 
 def home(request):
-    return render(request, 'home.html')
+    hostname = socket.gethostname()
+    return render(request, 'home.html', {'hostname': hostname})
 
 def index(request):
     products = Product.objects.all()
@@ -15,4 +17,3 @@ def new(request):
 def product(request, id):
     product = Product.objects.get(id=id)
     return render(request, 'product.html', {'product': product})
-
