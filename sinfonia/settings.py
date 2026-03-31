@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "192.168.64.5",  # nginx
-    "192.168.64.3",  # opzionale (test diretto)
-    "192.168.64.4",  # opzionale
+    "127.0.0.1",     # locale
+    "localhost",
 ]
 
 
